@@ -1,24 +1,27 @@
 # RSC-Scripts
 
-A personal collection of Java scripts for IdleRSC/OpenRSC automation and utility workflows.
+A personal collection of IdleRSC/OpenRSC automation scripts, helper classes, and utility files used for botting, progression, and experimentation in the RuneScape Classic-style environment.
 
-This repository contains scripts for common in-game tasks such as fishing, thieving, woodcutting, travel, questing, and account setup. The scripts are designed to be used as external scripts in IdleRSC, where they can be hot-loaded and reloaded without rebuilding the client.
+## Important note
+
+This repository contains a large mix of scripts and files gathered from different sources, including personal work, examples, community scripts, tutorials, and reference code. Many of the scripts in this project are not written by me, and I do not claim authorship of all files in this repository.
+
+This repo should be viewed as a curated archive and utility collection rather than a single, fully original project. Some files may be copied, adapted, or assembled from public examples and community resources.
 
 ## Overview
 
-RSC-Scripts is a curated personal library of automation scripts built for the OpenRSC/IdleRSC ecosystem. It includes both practical training scripts and utility scripts for account progression, navigation, and task automation.
+RSC-Scripts is a collection of Java-based scripts intended for use with IdleRSC/OpenRSC automation workflows. The project includes scripts for activities such as:
 
-The project is organized around the `scripts/` folder, which contains reusable Java classes, examples, and helper structures used by IdleRSC's external script loader.
+- fishing and gathering
+- thieving and stealth-based tasks
+- woodcutting and resource collection
+- travel and route-based scripts
+- questing and account setup
+- example and template scripts for learning and adaptation
 
-## Features
+## Repository purpose
 
-- Fishing and gathering automation
-- Thieving and stealth-based routines
-- Woodcutting and resource collection scripts
-- Travel and route-related scripts
-- Questing and progression utilities
-- New account setup helpers
-- Example scripts and supporting code for external scripting
+The goal of this repository is to keep useful scripts and reference files in one place for experimentation, automation, and personal use. Most files are designed to be loaded into the external scripts folder used by IdleRSC, where they can be hot-loaded and reloaded without rebuilding the client.
 
 ## Repository layout
 
@@ -43,47 +46,38 @@ RSC-Scripts/
 │   ├── idlescript/
 │   ├── sbot/
 │   └── run_linux_console.sh
-└── LICENSE (if added in future)
+└── ...
 ```
 
-## Getting started
+## How to use
 
 1. Open IdleRSC.
-2. Navigate to the external scripts directory used by your client setup.
-3. Place or edit the Java files in that folder.
-4. Reload scripts from within IdleRSC.
-5. Select the script you want to run and start it.
+2. Place or edit the Java scripts in your external scripts directory.
+3. Reload the script list within the client.
+4. Start the script you want to use.
 
-For most scripts in this repository, the expected workflow is the standard IdleRSC external script workflow: write or drop a Java class into the scripts folder, save it, then reload the script list in the client.
+This repository follows the standard IdleRSC external script workflow: add or edit Java files in the scripts directory, save them, then reload from within the client.
 
-## Script categories
+## Script ownership and attribution
 
-This repository includes a range of scripts for different play styles and account goals:
+Some scripts in this repository were created by me, while others may have been adapted from public examples, previous community resources, or shared scripts. Because this collection contains a mix of material, attribution is not always consistent across all files.
 
-- Farm and resource scripts
-- Utility and progression scripts
-- Travel and movement bots
-- Quest support and guidance scripts
-- Example and template scripts for learning and modification
+If you are using or redistributing anything from this repo, please treat it as a mixed-source archive and confirm the origin of individual files before claiming credit or reusing them commercially or publicly.
 
-## Important notes
+## Notes
 
-- This is a personal script collection and not a formal framework.
-- Some files are highly specialized and may be tailored to a specific training route or account setup.
-- Scripts may vary in quality, maintenance level, and suitability for your setup.
-- Use scripts responsibly and ensure they comply with the rules and expectations of your environment.
+- This is primarily a personal script archive and utility library.
+- The project is not a formal, single-authored framework.
+- Some files may be rough drafts, example code, or historical scripts rather than polished production scripts.
+- Use responsibly and in line with the rules and expectations of your environment.
 
 ## References
 
-- `scripts/README.md` — IdleRSC external script usage and hot-loading guidance
+- `scripts/README.md` — IdleRSC external script instructions and hot-loading notes
 - `scripts/README.txt` — quick reference notes
-- `scripts/ExampleScript.java` — a template/example script to get started
-- `scripts/Free Cloud Botting Tutorial.txt` — additional guidance and context
+- `scripts/ExampleScript.java` — example template for scripting
+- `scripts/Free Cloud Botting Tutorial.txt` — supplemental guidance
 
 ## License
 
-This repository does not currently declare an explicit license. If you plan to reuse, redistribute, or modify the scripts, please check the contents of the files and confirm the appropriate permissions before doing so.
-
-## Contributing
-
-This repository is primarily a personal workspace for scripting experiments and utility automation. Improvements, refinements, and new scripts are welcome in spirit, but the project is not currently structured as a formal public contribution pipeline.
+This repository does not currently declare an explicit license. Because the files are from mixed sources, individual scripts may carry different rights or restrictions. Please check the contents of specific files before reuse or redistribution.
