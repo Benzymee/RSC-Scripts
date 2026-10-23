@@ -1,0 +1,48 @@
+package scripting.sbot;
+
+import bot.ui.scriptselector.models.Category;
+import bot.ui.scriptselector.models.ScriptInfo;
+import compatibility.sbot.Script;
+
+public class JailRanger extends Script {
+  public static final ScriptInfo info =
+      new ScriptInfo(
+          new Category[] {Category.RANGED},
+          "SBot",
+          "Fights with Ranged in the Jail. SBot command: jailranger.",
+          null,
+          "Jail Ranger");
+
+
+
+
+  public String[] getCommands() {
+    return new String[] {"jailranger"};
+  }
+
+  public void ServerMessage(String message) {}
+
+  public void start(String command, String[] parameter) {
+    while (Running()) {
+      int[] ID = new int[] {21, 137, 192};
+      int Mob = GetNearestNPC(ID);
+      while (Mob != -1) {
+        AttackNPC(Mob);
+        Wait(100);
+        Mob = GetNearestNPC(ID);
+      }
+      if (GetX() != 285 && GetY() != 659) {
+        Walk(285, 659);
+      }
+      if (Fatigue() >= 95 && Running()) {
+        while (!Sleeping() && Running()) {
+          Use(FindInv(1263));
+          Wait(2500);
+        }
+        while (Sleeping() && Running()) {
+          Wait(100);
+        }
+      }
+    }
+  }
+}
