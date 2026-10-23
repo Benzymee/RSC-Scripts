@@ -1,23 +1,26 @@
 # RSC-Scripts
 
-A collection of Java scripts for IdleRSC/OpenRSC automation, focused on practical in-game tasks such as fishing, thieving, woodcutting, travel, and account setup.
+A personal collection of Java scripts for IdleRSC/OpenRSC automation and utility workflows.
 
-This repository is a personal script library for running and experimenting with botting workflows in the OpenRSC/IdleRSC ecosystem. The scripts are designed to be loaded into the external scripts folder used by IdleRSC, allowing them to be reloaded and run without rebuilding the client.
+This repository contains scripts for common in-game tasks such as fishing, thieving, woodcutting, travel, questing, and account setup. The scripts are designed to be used as external scripts in IdleRSC, where they can be hot-loaded and reloaded without rebuilding the client.
 
-## What is in this repository?
+## Overview
 
-The project includes a variety of utility and leveling scripts, including:
+RSC-Scripts is a curated personal library of automation scripts built for the OpenRSC/IdleRSC ecosystem. It includes both practical training scripts and utility scripts for account progression, navigation, and task automation.
 
-- Fishing scripts for efficient resource gathering
-- Thieving scripts for stealth-based money or item generation
-- Woodcutting scripts for training and resource collection
-- Travel and routing helpers such as Ardougne and Sarim movement scripts
-- New-account setup and questing utility scripts
-- General automation examples and helper classes
+The project is organized around the `scripts/` folder, which contains reusable Java classes, examples, and helper structures used by IdleRSC's external script loader.
 
-The scripts live under the `scripts/` directory and are meant to be used as external scripts in IdleRSC.
+## Features
 
-## Repository structure
+- Fishing and gathering automation
+- Thieving and stealth-based routines
+- Woodcutting and resource collection scripts
+- Travel and route-related scripts
+- Questing and progression utilities
+- New account setup helpers
+- Example scripts and supporting code for external scripting
+
+## Repository layout
 
 ```text
 RSC-Scripts/
@@ -33,38 +36,54 @@ RSC-Scripts/
 │   ├── BensSeersWoodcut.java
 │   ├── BensTrade.java
 │   ├── Thief2Ardougne.java
-│   ├── ...
+│   ├── Free Cloud Botting Tutorial.txt
+│   ├── apos/
 │   ├── common/
 │   ├── examples/
 │   ├── idlescript/
-│   ├── apos/
 │   ├── sbot/
 │   └── run_linux_console.sh
-└── ...
+└── LICENSE (if added in future)
 ```
 
-## How to use
+## Getting started
 
-1. Open your IdleRSC installation.
-2. Place or edit scripts in the external scripts directory used by the client.
-3. Reload the script list in IdleRSC.
-4. Start the desired script from the script selector.
+1. Open IdleRSC.
+2. Navigate to the external scripts directory used by your client setup.
+3. Place or edit the Java files in that folder.
+4. Reload scripts from within IdleRSC.
+5. Select the script you want to run and start it.
 
-For scripts that are meant to be hot-loaded, the project follows the standard IdleRSC external script workflow: add Java files, save them, and reload from within the client.
+For most scripts in this repository, the expected workflow is the standard IdleRSC external script workflow: write or drop a Java class into the scripts folder, save it, then reload the script list in the client.
 
-## Notes
+## Script categories
 
-- This is a personal collection and not a polished public framework.
-- Scripts may be tailored to specific training routes, account goals, or playstyles.
-- Some files may be experiments, utilities, or examples rather than production-ready scripts.
-- Use responsibly and in line with the rules of your game environment.
+This repository includes a range of scripts for different play styles and account goals:
 
-## Recommended references
+- Farm and resource scripts
+- Utility and progression scripts
+- Travel and movement bots
+- Quest support and guidance scripts
+- Example and template scripts for learning and modification
 
-- `scripts/README.md` for IdleRSC external script usage details
-- `scripts/README.txt` for a shorter usage note
-- `scripts/ExampleScript.java` for a template/example script
+## Important notes
+
+- This is a personal script collection and not a formal framework.
+- Some files are highly specialized and may be tailored to a specific training route or account setup.
+- Scripts may vary in quality, maintenance level, and suitability for your setup.
+- Use scripts responsibly and ensure they comply with the rules and expectations of your environment.
+
+## References
+
+- `scripts/README.md` — IdleRSC external script usage and hot-loading guidance
+- `scripts/README.txt` — quick reference notes
+- `scripts/ExampleScript.java` — a template/example script to get started
+- `scripts/Free Cloud Botting Tutorial.txt` — additional guidance and context
 
 ## License
 
-This repository does not currently declare a specific license. If you plan to reuse or redistribute scripts, check the individual files and contact the author before doing so.
+This repository does not currently declare an explicit license. If you plan to reuse, redistribute, or modify the scripts, please check the contents of the files and confirm the appropriate permissions before doing so.
+
+## Contributing
+
+This repository is primarily a personal workspace for scripting experiments and utility automation. Improvements, refinements, and new scripts are welcome in spirit, but the project is not currently structured as a formal public contribution pipeline.
