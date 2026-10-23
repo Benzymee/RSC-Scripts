@@ -1,0 +1,46 @@
+package scripting.apos;
+
+import bot.ui.scriptselector.models.Category;
+import bot.ui.scriptselector.models.ScriptInfo;
+import compatibility.apos.Script;
+
+public final class PathWalkerArgs extends Script {
+  public static final ScriptInfo info =
+      new ScriptInfo(
+          new Category[] {Category.MISCELLANEOUS},
+          "APOS",
+          "Walks path args.",
+          null,
+          "Path Walker Args");
+
+
+
+
+  private final PathWalker pw;
+  private PathWalker.Path walkingPath;
+
+  public PathWalkerArgs(String ex) {
+    this.pw = new PathWalker(ex);
+  }
+
+  @Override
+  public void init(String params) {
+    int x = Integer.parseInt(params.split(",")[0]);
+    int y = Integer.parseInt(params.split(",")[1]);
+
+    if (walkingPath == null) {
+      pw.init(null);
+      walkingPath = pw.calcPath(getX(), getY(), x, y);
+    }
+
+    pw.setPath(walkingPath);
+  }
+
+  @Override
+  public int main() {
+    if (pw.walkPath()) return 100;
+
+    stopScript();
+    return 0;
+  }
+}

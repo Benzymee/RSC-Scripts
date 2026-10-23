@@ -1,0 +1,42 @@
+package scripting.sbot;
+
+import bot.ui.scriptselector.models.Category;
+import bot.ui.scriptselector.models.ScriptInfo;
+import compatibility.sbot.Script;
+
+public class WallJumper extends Script {
+  public static final ScriptInfo info =
+      new ScriptInfo(
+          new Category[] {Category.AGILITY},
+          "SBot",
+          "Jumps the agility wall. SBot command: jumpwall.",
+          null,
+          "Wall Jumper");
+
+
+
+  public String[] getCommands() {
+    return new String[] {"jumpwall"};
+  }
+
+  public void start(String command, String[] parameter) {
+    DisplayMessage(
+        "@ran@=@ran@=@ran@=@ran@=@ran@= @whi@Low Wall Jumper Activated! @ran@=@ran@=@ran@=@ran@=@ran@=",
+        3);
+    DisplayMessage(
+        "@ran@=@ran@=@ran@=@ran@=@ran@= @whi@Created by SaladFork! @ran@=@ran@=@ran@=@ran@=@ran@=",
+        3);
+    while (Running()) {
+      if (Fatigue() >= 95 && Running()) {
+        while (!Sleeping() && Running()) {
+          Use(FindInv(1263));
+          Wait(2500);
+        }
+        while (Sleeping() && Running()) Wait(100);
+      }
+      OpenDoor(495, 558, 1);
+      Wait(2000);
+    }
+    DisplayMessage("@red@STOPPED", 3);
+  }
+}
